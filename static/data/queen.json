@@ -1,0 +1,12 @@
+{
+  "name": "Queen",
+  "songs": [
+    {
+      "title": "We Will Rock You",
+      "artist": "Queen",
+      "album": "Greatest Hits",
+      "time": "2.45",
+      "src": "static/data/Killing-In-The-Name.mp3"
+    }
+  ]
+}

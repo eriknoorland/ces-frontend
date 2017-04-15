@@ -1,0 +1,19 @@
+{
+  "name": "RATM",
+  "songs": [
+    {
+      "title": "Killing In The Name",
+      "artist": "Rage Against The Machine",
+      "album": "Rage Against The Machine",
+      "time": "6:31",
+      "src": "static/data/Killing-In-The-Name.mp3"
+    },
+    {
+      "title": "Bombtrack",
+      "artist": "Rage Against The Machine",
+      "album": "Rage Against The Machine",
+      "time": "3:54",
+      "src": "static/data/Bombtrack.mp3"
+    }
+  ]
+}
