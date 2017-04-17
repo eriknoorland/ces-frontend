@@ -2,6 +2,10 @@
   "name": "ces-frontend",
   "version": "1.0.0",
   "description": "The frontend of a car entertainment system built with Vue.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eriknoorland/ces-frontend.git"
+  },
   "author": "Erik Noorland",
   "private": true,
   "scripts": {
