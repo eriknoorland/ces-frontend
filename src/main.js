@@ -18,7 +18,7 @@ new Vue({
     this.$store.state.player.volume = this.$store.state.currentVolume;
 
     window
-      .fetch('static/data/playlists.json')
+      .fetch('/playlists')
       .then(response => response.json())
       .then(response => {
         this.$store.state.playlists = response;
