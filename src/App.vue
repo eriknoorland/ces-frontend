@@ -16,7 +16,7 @@
 
     <section class="controlsContainer">
       <current-song />
-      <audio id="player" :src="$store.state.currentSong.src"></audio>
+      <player />
       <playlist-controls />
       <audio-controls :volume="$store.state.currentVolume" />
     </section>
@@ -27,6 +27,7 @@
   import Playlists from './components/Playlists'
   import Playlist from './components/Playlist'
   import CurrentSong from './components/CurrentSong'
+  import Player from './components/Player'
   import PlaylistControls from './components/PlaylistControls'
   import AudioControls from './components/AudioControls'
 
@@ -36,6 +37,7 @@
       Playlists,
       Playlist,
       CurrentSong,
+      Player,
       PlaylistControls,
       AudioControls
     }

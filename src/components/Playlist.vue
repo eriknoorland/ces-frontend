@@ -1,40 +1,36 @@
 <template>
-  <table class="song__list" v-if="items.length > 0">
+  <table class="song__list" v-if="songs.length > 0">
     <thead>
       <tr>
         <td>Title</td>
         <td>Artist</td>
         <td>Album</td>
         <td>Time</td>
+        <td></td>
       </tr>
     </thead>
     <tbody>
-      <tr class="song" v-for="(song, index) in items" :key="index" :song="song" v-on:click.prevent="onSongClick(index)">
-        <td class="song__title">{{song.title}}</td>
-        <td class="song__artist">{{song.artist}}</td>
-        <td class="song__album">{{song.album}}</td>
-        <td class="song__time">{{song.time}}</td>
-      </tr>
+      <song 
+        v-for="(song, index) in songs"
+        :key="index"
+        :song="song"
+        :index="index" />
     </tbody>
   </table>
 </template>
 
 <script>
+  import Song from './Song'
+
   export default {
     name: 'playlist',
     computed: {
-      items() {
+      songs() {
         return this.$store.state.songs;
       }
     },
-    methods: {
-      onSongClick: function(index) {
-        this.$store.commit('changeSong', index);
-
-        if(!this.$store.state.paused) {
-          this.$store.commit('togglePlayPause');
-        }
-      }
+    components: {
+      Song
     }
   }
 </script>
@@ -51,9 +47,5 @@
 
   thead tr {
     border-bottom: 1px solid #f2f2f2;
-  }
-
-  .song:nth-child(odd) {
-    background-color: #f2f2f2;
   }
 </style>

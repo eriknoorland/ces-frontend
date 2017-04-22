@@ -1,5 +1,9 @@
 [
   {
+    "src": "test.json",
+    "name": "test"
+  },
+  {
     "src": "ratm.json",
     "name": "Rage Against The Machine"
   },

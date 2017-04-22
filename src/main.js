@@ -14,11 +14,9 @@ new Vue({
   template: '<App class="wrapper" v-cloak/>',
   components: { App },
   mounted() {
-    this.$store.state.player = document.getElementById('player');
-    this.$store.state.player.volume = this.$store.state.currentVolume;
-
     window
       .fetch('/playlists')
+      // .fetch('static/data/playlists.json')
       .then(response => response.json())
       .then(response => {
         this.$store.state.playlists = response;
