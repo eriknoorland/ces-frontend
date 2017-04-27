@@ -13,9 +13,11 @@ export default new Vuex.Store({
     songs: [],
     currentPlaylist: {},
     currentSong: {},
-    progress: 0.25,
     paused: true,
     muted: false,
+    progress: 0,
+    totalTime: 0,
+    currentTime: 0,
     currentVolume: Number(localStorage.getItem('volume')) || 0.7,
     shuffle: localStorage.getItem('shuffle') === 'true',
     repeat: false

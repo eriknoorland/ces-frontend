@@ -21,7 +21,10 @@
       <i class="fa fa-repeat"></i>
     </button>
 
-    <progress-bar :progress="$store.state.progress"></progress-bar>
+    <progress-bar :progress="$store.getters.progress"></progress-bar>
+    
+    <span class="currentTime">{{this.$store.getters.currentTime}}</span>
+    <span class="totalTime">{{this.$store.getters.totalTime}}</span>
   </div>
 </template>
 
@@ -49,3 +52,13 @@
     }
   }
 </script>
+
+<style>
+.currentTime {
+  float: left;
+}
+
+.totalTime {
+  float: right;
+}
+</style>

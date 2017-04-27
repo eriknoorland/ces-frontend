@@ -27,6 +27,14 @@ export default {
     state.paused = state.player.paused;
   },
 
+  updateTotalTime(state, duration) {
+    state.totalTime = duration;
+  },
+
+  updateCurrentTime(state, currentTime) {
+    state.currentTime = currentTime;
+  },
+
   volumeStepDown(state) {
     if(state.currentVolume > 0) {
       state.currentVolume = Math.max(0, state.currentVolume - 0.05);
