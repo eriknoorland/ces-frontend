@@ -20,6 +20,14 @@
       onPlaylistClick: function(index) {
         this.$store.dispatch('changePlaylist', index);
       }
+    },
+    mounted() {
+      window
+        .fetch(process.env.API_URL + '/playlists/')
+        .then(response => response.json())
+        .then(response => {
+          this.$store.state.playlists = response;
+        });
     }
   }
 </script>

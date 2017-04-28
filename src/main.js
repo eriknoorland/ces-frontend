@@ -1,4 +1,4 @@
-  // The Vue build version to load with the `import` command
+// The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import Vuex from 'vuex'
@@ -12,14 +12,7 @@ new Vue({
   el: '#app',
   store,
   template: '<App class="wrapper" v-cloak/>',
-  components: { App },
-  mounted() {
-    window
-      .fetch('/playlists')
-      // .fetch('static/data/playlists.json')
-      .then(response => response.json())
-      .then(response => {
-        this.$store.state.playlists = response;
-      });
+  components: {
+    App
   }
 })
