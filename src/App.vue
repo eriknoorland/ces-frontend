@@ -8,7 +8,7 @@
     </section>
 
     <section class="playlistContainer">
-      <span v-if="$store.state.songs.length === 0">
+      <span class="container__title" v-if="$store.state.songs.length === 0">
         Select a playlist
       </span>
       <playlist v-if="$store.state.songs.length > 0" />
@@ -51,6 +51,9 @@
 
   html, body {
     font-family: sans-serif;
+    font-weight: 100;
+    color: #ccc;
+    background: #171717;
   }
 
   html, body, .wrapper {
@@ -64,12 +67,13 @@
   .wrapper {
     font-size: 0;
   }
+
   .playlistsContainer,
   .playlistContainer,
   .controlsContainer {
     box-sizing: border-box;
     padding: 10px;
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .playlistsContainer {
@@ -78,7 +82,7 @@
     height: calc(100% - 100px);
     vertical-align: top;
     overflow-y: auto;
-    border-right: 1px solid #f2f2f2;
+    border-right: 1px solid #111;
   }
 
   .playlistContainer {
@@ -91,25 +95,23 @@
   .controlsContainer {
     height: 100px;
     display: flex;
-    border-top: 1px solid #f2f2f2;
+    border-top: 1px solid #111;
   }
 
   .container__title {
-    font-weight: bold;
+    display: block;
+    margin: 10px;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #666;
   }
 
   .currentSong {
     flex-basis: 200px;
   }
 
-  .controls {
-    flex-basis: 50%;
-    text-align: center;
-  }
-
-  .volume {
-    flex-basis: 25%;
-    text-align: center;
+  a {
+    color: inherit;
   }
 
   button {
@@ -119,9 +121,15 @@
     border: 0;
     font-size: 20px;
     background: none;
+    outline: none;
+    color: #ccc;
+  }
+
+  button[disabled] {
+    color: #111;
   }
 
   button.active {
-    color: blue;
+    color: #2f8;
   }
 </style>

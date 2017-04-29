@@ -42,10 +42,12 @@
   }
 
   thead {
-    font-weight: bold;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #666;
   }
 
-  thead tr {
-    border-bottom: 1px solid #f2f2f2;
+  tr {
+    border-bottom: 1px solid #222;
   }
 </style>

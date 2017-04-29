@@ -22,12 +22,12 @@
   .progress {
     width: 100%;
     height: 4px;
-    background: #999;
+    background: #111;
   }
 
   .progress__bar {
-    width: 30%;
+    width: 0;
     height: 100%;
-    background: #333;
+    background: #999;
   }
 </style>

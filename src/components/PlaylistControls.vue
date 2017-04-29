@@ -1,5 +1,5 @@
 <template>
-  <div class="controls">
+  <div class="playlistControls">
     <button v-on:click="toggleShuffle()" :class="{active: $store.state.shuffle}">
       <i class="fa fa-random"></i>
     </button>
@@ -17,7 +17,7 @@
       <i class="fa fa-step-forward"></i>
     </button>
 
-    <button :class="{active: $store.state.repeat}">
+    <button :class="{active: $store.state.repeat}" disabled="disabled">
       <i class="fa fa-repeat"></i>
     </button>
 
@@ -54,11 +54,25 @@
 </script>
 
 <style>
-.currentTime {
-  float: left;
-}
+  .playlistControls {
+    padding: 0 10px;
+    flex-basis: 50%;
+    text-align: center;
+  }
 
-.totalTime {
-  float: right;
-}
+  .currentTime,
+  .totalTime {
+    display: block;
+    margin: 5px 1px;
+    font-size: 11px;
+    color: #666;
+  }
+
+  .currentTime {
+    float: left;
+  }
+
+  .totalTime {
+    float: right;
+  }
 </style>

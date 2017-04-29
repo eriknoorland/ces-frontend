@@ -16,3 +16,21 @@
     }
   }
 </script>
+
+<style>
+  .currentSong {
+    box-sizing: border-box;
+    padding: 10px;
+    line-height: 1.4;
+  }
+
+  .currentSong__title {
+    margin: 0 0 3px 0;
+  }
+
+  .currentSong__artist,
+  .currentSong__album {
+    font-size: 11px;
+    color: #666;
+  }
+</style>

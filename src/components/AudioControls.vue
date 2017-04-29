@@ -1,5 +1,5 @@
 <template>
-  <div class="volume">
+  <div class="audioControls">
     <button class="" v-on:click.prevent="volumeStepDown()">
       <i class="fa fa-minus"></i>
     </button>
@@ -41,3 +41,11 @@
     }
   }
 </script>
+
+<style>
+  .audioControls {
+    padding: 0 10px;
+    flex-basis: 25%;
+    text-align: center;
+  }
+</style>

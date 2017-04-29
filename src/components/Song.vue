@@ -47,12 +47,16 @@
 </script>
 
 <style>
-  .song:nth-child(odd) {
-    background-color: #f2f2f2;
+  .song__list td {
+    padding: 10px;
   }
 
   .song .fa {
     visibility: hidden;
+  }
+
+  .song.active {
+    color: #2f8;;
   }
 
   .song.active .fa {

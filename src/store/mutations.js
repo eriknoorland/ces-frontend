@@ -37,7 +37,7 @@ export default {
 
   volumeStepDown(state) {
     if(state.currentVolume > 0) {
-      state.currentVolume = Math.max(0, state.currentVolume - 0.05);
+      state.currentVolume = Math.max(0, state.currentVolume - 0.1);
       state.player.volume = state.currentVolume;
       localStorage.setItem('volume', state.currentVolume);
     }
@@ -45,7 +45,7 @@ export default {
 
   volumeStepUp(state) {
     if(state.currentVolume < 1) {
-      state.currentVolume = Math.min(1, state.currentVolume + 0.05);
+      state.currentVolume = Math.min(1, state.currentVolume + 0.1);
       state.player.volume = state.currentVolume;
       localStorage.setItem('volume', state.currentVolume);
     }
